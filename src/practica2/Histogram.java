@@ -2,16 +2,16 @@ package practica2;
 
 import java.util.HashMap;
 
-public class Histogram {
+public class Histogram<T> {
 
-    private final int[] vector;
+    private final T [] vector;
 
-    public Histogram(int[] vector) {
+    public Histogram(T[] vector) {
         this.vector = vector;
     }
     
-    public HashMap <Integer,Integer> getHisto(){
-        HashMap<Integer,Integer> histo = new HashMap<>();
+    public HashMap <T,Integer> getHisto(){
+        HashMap<T,Integer> histo = new HashMap<>();
         for (int i = 0; i < vector.length; i++) {
             if(!histo.containsKey(vector[i])){
                 histo.put(vector[i],1);
